@@ -122,6 +122,22 @@ Task:
    in each block so you can see the flow of control.
 */
 
+function maxItem(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    throw new Error("Array must be non-empty.");
+  }
+  return Math.max(...arr);
+}
+
+try {
+  console.log("trying to find max");
+  const maxVal = maxItem([]); // This will throw
+} catch (e) {
+  console.log("caught error: ", e.message);
+} finally {
+  console.log("finally block ");
+}
+
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
 // ===================================================================================
