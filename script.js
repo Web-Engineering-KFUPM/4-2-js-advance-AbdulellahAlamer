@@ -22,6 +22,31 @@ Task:
 4) Create an instance/object and output its attributes using the getter(s).
 */
 
+// Solution for TODO-1
+class Student {
+  constructor(firstName, lastName, gpa) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this._gpa = gpa;
+  }
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  get gpa() {
+    return this._gpa;
+  }
+  set gpa(v) {
+    if (v >= 0 && v <= 4) this._gpa = v;
+  }
+}
+const firstStudent = new Student("Abdulellah", "Alamer", 4.0);
+// Use like normal properties: person.fullName; person.gpa; person.gpa = 3.9;
+
+console.log("full Name:", firstStudent.fullName);
+console.log("current GPA:", firstStudent.gpa);
+firstStudent.gpa = 3.9;
+console.log("updateGpa :", firstStudent.gpa);
+
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
 // ====================================
