@@ -55,7 +55,11 @@ Task:
 1) Make an object used as a "map" (key → value), e.g., course codes → titles.
 2) Iterate over it with for...in and display each key and value.
 */
-const courseTitles = { A101: "Intro", A201: "Data Structures" };
+const courseTitles = {
+  A101: "Intro",
+  A201: "Data Structures",
+  SWE363: "Web deveoplment",
+};
 
 for (const key in courseTitles) {
   console.log("key = ", key, "/ value = ", courseTitles[key]);
@@ -69,6 +73,11 @@ Task:
 1) Create a String object or plain string.
 2) Use .charAt(index) and .length to output characters and size.
 */
+const str = "Abdulellah";
+console.log("string = ", str);
+console.log("length=", str.length);
+console.log("string at 0", str.charAt(0));
+console.log("string at 4", str.charAt(4));
 
 // ===================================
 // TODO-4: DATE — day, month, and year
