@@ -151,3 +151,11 @@ Given: const words = ["ban", "babble", "make", "flab"];
 */
 
 // End of Advance JavaScript Lab — good luck!
+const words = ["cat", "rabbit", "dragon", "caterpillar"];
+const re = /cat/;
+
+words.forEach((w) => {
+  if (re.test(w)) {
+    console.log(`${w} matches!`);
+  }
+});
